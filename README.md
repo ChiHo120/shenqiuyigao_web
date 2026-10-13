@@ -37,6 +37,7 @@
 
 阅读 [贡献指南](CONTRIBUTING.md) 与 [安全说明](SECURITY.md)。欢迎从移动端体验、可访问性、测试和后台功能入手。生产与预览环境必须使用不同数据库和权限。
 
-GitHub Actions 仅运行检查与构建，不自动部署、不使用生产密钥。请勿给不可信 PR 提供生产凭据。
+当前登录令牌缺少 workflow 权限，自动 CI 暂未启用。工作流模板保存在 docs/ci-workflow.example.yml；获得相应权限后，可复制到 .github/workflows/ci.yml 启用检查与构建。它不自动部署，也不需要生产密钥。
 
 MIT 许可证见 [LICENSE](LICENSE)。许可证不覆盖学校名称、标识或未随仓库提供的第三方素材；新增素材必须注明授权来源。
+
