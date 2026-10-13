@@ -1,0 +1,7 @@
+-- 新项目基础结构；不包含生产数据或账号。
+create table public.news (id serial primary key, title text not null, content text not null, author text, category text, image_url text, external_url text, publish_date timestamptz default now(), created_at timestamptz default now(), updated_at timestamptz default now());
+create table public.notices (id serial primary key, title text not null, content text not null, priority int default 2, is_pinned boolean default false, publish_date timestamptz default now(), created_at timestamptz default now(), updated_at timestamptz default now());
+create table public.teachers (id serial primary key, name text not null, title text, subject text, education text, achievements text, avatar_url text, created_at timestamptz default now(), updated_at timestamptz default now());
+create table public.achievements (id serial primary key, title text not null, description text, type text, year int, image_url text, created_at timestamptz default now(), updated_at timestamptz default now());
+create table public.gallery (id serial primary key, title text not null, description text, category text, image_url text not null, upload_date timestamptz default now(), created_at timestamptz default now(), updated_at timestamptz default now());
+create table public.school_stats (id serial primary key, stat_name text not null, stat_value text, description text, created_at timestamptz default now(), updated_at timestamptz default now());
