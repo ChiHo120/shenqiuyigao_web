@@ -8,7 +8,7 @@ node_modules、dist、.env 和 .wrangler 已排除。不要用强制添加绕过
 
 ## 自动检查
 
-本次 GitHub 登录令牌没有 workflow 权限，因此自动 CI 暂未启用。完整模板保存在 ci-workflow.example.yml；以后获取 workflow 权限后，再把模板复制到 .github/workflows/ci.yml 并提交。
+自动 CI 已启用，配置位于 ../.github/workflows/ci.yml，完整模板仍保留在 ci-workflow.example.yml。每次推送和 Pull Request 都会运行公开源码检查与构建。
 
 ## 部署边界
 
